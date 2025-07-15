@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="cal">
+        <input type="number" placeholder="Enter the First Number" id="fvalue"><br><br>
+        <input type="number" placeholder="Enter the Second Number " id="svalue"><br><br>
+        <select name="oper" id="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br><br>
+
+        <button id="clickme">Click Me</button>
+    </div>
+    <div id="result">
+
+    </div>
+    <script>
+        let a;
+        let button=document.getElementById("clickme")
+        button.addEventListener('click',()=>{
+            let val1=document.getElementById("fvalue").value;
+            let val2=document.getElementById("svalue").value;
+            let oper=document.getElementById("operation").value;
+            let result=document.getElementById("result");
+
+            if(val1==""&& val2=="")
+        {
+            alert("Please Enter the Number")
+        }
+         else if(oper=="+")
+        {
+            let a=parseFloat(val1)+parseFloat(val2);
+            result.innerHTML=a;
+        }
+            else if(oper=="-")
+        {
+            let a=val1-val2;
+            result.innerHTML=a;
+        }
+           else if(oper=="*")
+        {
+            let a=val1*val2;
+            result.innerHTML=a;
+        }
+           else if(oper=="/")
+        {
+            let a=val1/val2;
+            result.innerHTML=a;
+        }
+        })
+    </script>
+</body>
+</html
